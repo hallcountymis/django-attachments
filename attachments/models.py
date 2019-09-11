@@ -44,6 +44,7 @@ class Attachment(models.Model):
     )
     created = models.DateTimeField(_('created'), auto_now_add=True)
     modified = models.DateTimeField(_('modified'), auto_now=True)
+    label = models.CharField(max_length=128, null=True, blank=True)
 
     class Meta:
         verbose_name = _("attachment")
